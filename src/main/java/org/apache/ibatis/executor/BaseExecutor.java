@@ -176,6 +176,7 @@ public abstract class BaseExecutor implements Executor {
             throw new ExecutorException("Executor was closed.");
         }
         // 清空本地缓存，如果 queryStack 为零，并且要求清空本地缓存。
+        // sql语句属性设置 flushCache="true"的时候，每一次都清空缓存
         if (queryStack == 0 && ms.isFlushCacheRequired()) {
             clearLocalCache();
         }

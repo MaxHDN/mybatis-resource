@@ -36,7 +36,7 @@ public class MybatisTest {
    * mapper代理方式
    */
   public void test2() throws IOException {
-
+    // 前三步和传统的方式一样
     InputStream inputStream = Resources.getResourceAsStream("sqlMapConfig.xml");
     SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
     SqlSession sqlSession = factory.openSession();
